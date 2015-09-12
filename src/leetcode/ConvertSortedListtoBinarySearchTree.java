@@ -1,5 +1,8 @@
 package leetcode;
 
+import leetcode.model.ListNode;
+import leetcode.model.TreeNode;
+
 public class ConvertSortedListtoBinarySearchTree {
 
 	public static void main(String[] args) {

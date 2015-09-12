@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.model.ListNode;
+
 public class Delete_duplicates_from_sorted_list {
 
 

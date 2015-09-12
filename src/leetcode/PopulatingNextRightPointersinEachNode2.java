@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.model.TreeLinkNode;
+
 public class PopulatingNextRightPointersinEachNode2 {
 
 	public static void main(String[] args) {

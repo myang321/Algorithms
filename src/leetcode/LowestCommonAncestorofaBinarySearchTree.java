@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.model.TreeNode;
+
 public class LowestCommonAncestorofaBinarySearchTree {
 
 	public static void main(String[] args) {

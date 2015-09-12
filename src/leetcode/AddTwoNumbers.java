@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.model.ListNode;
+
 public class AddTwoNumbers {
 
 	public static void main(String[] args) {

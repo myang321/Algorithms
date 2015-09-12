@@ -15,6 +15,7 @@ public class PalindromePartitioning {
 
 	}
 
+	// max result 2^(n-1), so result is exponential 
 	private ArrayList<List<String>> results;
 
 	public List<List<String>> partition(String s) {

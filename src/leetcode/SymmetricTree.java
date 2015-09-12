@@ -1,6 +1,8 @@
 package leetcode;
 import java.util.LinkedList;
 
+import leetcode.model.TreeNode;
+
 public class SymmetricTree {
 
 	/**

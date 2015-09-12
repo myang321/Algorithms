@@ -2,6 +2,8 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
+import leetcode.model.TreeNode;
+
 public class BinaryTreeRightSideView {
 
 	public static void main(String[] args) {

@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.model.ListNode;
+
 public class RemoveNthNodeFromEndofList {
 
 	public static void main(String[] args) {

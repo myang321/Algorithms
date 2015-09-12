@@ -1,6 +1,8 @@
 package leetcode;
 import java.util.LinkedList;
 
+import leetcode.model.TreeLinkNode;
+
 public class PopulatingNextRightPointersinEachNode {
 
 	public static void main(String[] args) {

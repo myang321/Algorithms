@@ -1,6 +1,8 @@
 package leetcode;
 import java.util.Stack;
 
+import leetcode.model.TreeNode;
+
 public class BinarySearchTreeIterator {
 
 	public static void main(String[] args) {

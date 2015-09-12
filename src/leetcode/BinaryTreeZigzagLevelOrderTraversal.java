@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Stack;
 
+import leetcode.model.TreeNode;
+
 public class BinaryTreeZigzagLevelOrderTraversal {
 
 	public static void main(String[] args) {

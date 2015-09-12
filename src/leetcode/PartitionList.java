@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.model.ListNode;
+
 public class PartitionList {
 
 	public static void main(String[] args) {

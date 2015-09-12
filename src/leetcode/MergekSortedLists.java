@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+import leetcode.model.ListNode;
+
 public class MergekSortedLists {
 
 	public static void main(String[] args) {

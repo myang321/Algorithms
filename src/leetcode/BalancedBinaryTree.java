@@ -1,6 +1,8 @@
 package leetcode;
 import java.util.Scanner;
 
+import leetcode.model.TreeNode;
+
 
 public class BalancedBinaryTree {
 

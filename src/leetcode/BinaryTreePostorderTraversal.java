@@ -2,6 +2,8 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.Stack;
 
+import leetcode.model.TreeNode;
+
 public class BinaryTreePostorderTraversal {
 
 	public static void main(String[] args) {

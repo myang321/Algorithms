@@ -2,6 +2,8 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+import leetcode.model.TreeNode;
+
 public class BinaryTreeLevelOrderTraversal2 {
 
 	/**

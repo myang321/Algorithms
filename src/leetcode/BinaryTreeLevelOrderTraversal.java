@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import leetcode.model.TreeNode;
+
 public class BinaryTreeLevelOrderTraversal {
 
 	/**

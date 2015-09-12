@@ -1,6 +1,8 @@
 package leetcode;
 import java.util.ArrayList;
 
+import leetcode.model.TreeNode;
+
 public class PathSum2 {
 
 	public static void main(String[] args) {

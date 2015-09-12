@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.model.TreeNode;
+
 class SumRoottoLeafNumbers {
 
 	public static void main(String[] args) {
