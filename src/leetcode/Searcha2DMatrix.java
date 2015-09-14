@@ -8,6 +8,7 @@ public class Searcha2DMatrix {
 	}
 
 	public static boolean searchMatrix(int[][] matrix, int target) {
+		// start from bottom
 		for (int i = matrix.length - 1; i >= 0; i--) {
 			if (matrix[i][0] <= target) {
 				for (int j = 0; j < matrix[i].length; j++) {
