@@ -1,4 +1,5 @@
 package leetcode;
+
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -31,16 +32,17 @@ public class IsomorphicStrings {
 			return true;
 		HashMap<Character, Integer> hms = new HashMap<Character, Integer>();
 		HashMap<Character, Integer> hmt = new HashMap<Character, Integer>();
-		for (int i = 0, cnt = 0; i < s.length(); i++) {
+		for (int i = 0; i < s.length(); i++) {
 			char cs = s.charAt(i);
 			char ct = t.charAt(i);
 			if (!hms.containsKey(cs)) {
-				hms.put(cs, cnt);
+				// i is the first position of cs
+				hms.put(cs, i);
 			}
 			if (!hmt.containsKey(ct)) {
-				hmt.put(ct, cnt);
+				hmt.put(ct, i);
 			}
-			cnt++;
+			// the first position of cs and ct should be the same
 			if (hms.get(cs) != hmt.get(ct))
 				return false;
 		}
@@ -50,20 +52,17 @@ public class IsomorphicStrings {
 	public static boolean isIsomorphic(String s, String t) {
 		if (s == null || s.length() == 0)
 			return true;
-		HashMap<Character, Integer> hms = new HashMap<Character, Integer>();
-		HashMap<Character, Integer> hmt = new HashMap<Character, Integer>();
-		for (int i = 0, cnt = 0; i < s.length(); i++) {
-			char cs = s.charAt(i);
-			char ct = t.charAt(i);
-			if (!hms.containsKey(cs)) {
-				hms.put(cs, cnt);
-			}
-			if (!hmt.containsKey(ct)) {
-				hmt.put(ct, cnt);
-			}
-			cnt++;
-			if (hms.get(cs) != hmt.get(ct))
+		int[] sArray = new int[256];
+		int[] tArray = new int[256];
+		for (int i = 0; i < s.length(); i++) {
+			int idxs = s.charAt(i);
+			int idxt = t.charAt(i);
+			// last position of idxs and idxt should be the same
+			if (sArray[idxs] != tArray[idxt])
 				return false;
+			// value start from 1 not 0
+			sArray[idxs] = i + 1;
+			tArray[idxt] = i + 1;
 		}
 		return true;
 	}
