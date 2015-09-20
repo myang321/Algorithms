@@ -20,10 +20,10 @@ public class PalindromePermutation {
 
 	}
 
-	// can have no more than one char that appear odd times 
+	// can have no more than one char that appear odd times
 	public boolean canPermutePalindrome(String s) {
-		int[] hashMap = new int[26];
-		for (char c : s.toLowerCase().toCharArray()) {
+		int[] hashMap = new int[256];
+		for (char c : s.toCharArray()) {
 			hashMap[c - 'a']++;
 		}
 		// cnt odd

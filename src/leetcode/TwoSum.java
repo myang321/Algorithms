@@ -1,17 +1,20 @@
 package leetcode;
+
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 public class TwoSum {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] a = { 3, 2, 4 };
-
-		twoSum(a, 6);
+		TwoSum ts = new TwoSum();
+		ts.twoSum(a, 6);
 	}
 
-	public static int[] twoSum(int[] numbers, int target) {
+	// using hashmap to get the other number : target - numbers[i]
+	public int[] twoSum(int[] numbers, int target) {
 		HashMap<Integer, Integer> h = new HashMap<Integer, Integer>();
 		int[] res = new int[2];
 		for (int i = 0; i < numbers.length; i++) {
@@ -30,7 +33,8 @@ public class TwoSum {
 		return res;
 	}
 
-	public static int[] twoSum2(int[] numbers, int target) {
+	// sort first
+	public int[] twoSum2(int[] numbers, int target) {
 		int[] numbers2 = new int[numbers.length];
 		for (int i = 0; i < numbers.length; i++)
 			numbers2[i] = numbers[i];
