@@ -11,7 +11,6 @@ public class NumberofIslands {
 
 	private int n;
 	private int m;
-	private boolean[][] visited;
 
 	// find all connected component, using bfs
 	public int numIslands(char[][] grid) {
@@ -20,10 +19,9 @@ public class NumberofIslands {
 		int cnt = 0;
 		n = grid.length;
 		m = grid[0].length;
-		visited = new boolean[n][m];
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
-				if (grid[i][j] == '1' && visited[i][j] == false) {
+				if (grid[i][j] == '1') {
 					cnt++;
 					bfs(grid, i, j);
 				}
@@ -46,10 +44,11 @@ public class NumberofIslands {
 				int x1 = x + move[i][0];
 				int y1 = y + move[i][1];
 				if (x1 >= 0 && y1 >= 0 && x1 < n && y1 < m
-						&& grid[x1][y1] == '1' && visited[x1][y1] == false) {
+						&& grid[x1][y1] == '1') {
 					xList.add(x1);
 					yList.add(y1);
-					visited[x1][y1] = true;
+					// mark visited cell
+					grid[x1][y1] = '2';
 				}
 			}
 		}
