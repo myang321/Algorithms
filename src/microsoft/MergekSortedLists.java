@@ -36,6 +36,7 @@ public class MergekSortedLists {
 		return dummy.next;
 	}
 
+	// use divide and conquer
 	public ListNode mergeKLists(ListNode[] lists) {
 		return helper(lists, 0, lists.length);
 	}
