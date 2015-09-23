@@ -1,24 +1,26 @@
 package leetcode;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Iterator;
+import java.util.List;
 
 public class Subsets2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int a[] = { 1, 1 };
-		subsetsWithDup(a);
+		Subsets2 ss = new Subsets2();
+		ss.subsetsWithDup(a);
 
 	}
 
-	public static ArrayList<ArrayList<Integer>> subsetsWithDup(int[] num) {
+	public List<List<Integer>> subsetsWithDup(int[] nums) {
 		ArrayList<Integer> arr = new ArrayList<Integer>();
-		for (int e : num)
+		for (int e : nums)
 			arr.add(e);
 		Collections.sort(arr);
-		ArrayList<ArrayList<Integer>> ll = new ArrayList<ArrayList<Integer>>();
+		ArrayList<List<Integer>> ll = new ArrayList<List<Integer>>();
 		//
 		ll.add(new ArrayList<Integer>());
 		for (Integer e : arr) {
@@ -29,12 +31,12 @@ public class Subsets2 {
 				ll.add(tmp);
 			}
 		}
-		HashSet<ArrayList<Integer>> hl = new HashSet<ArrayList<Integer>>();
-		for (ArrayList<Integer> l : ll) {
+		HashSet<List<Integer>> hl = new HashSet<List<Integer>>();
+		for (List<Integer> l : ll) {
 			hl.add(l);
 		}
 		ll.clear();
-		for (ArrayList<Integer> l : hl) {
+		for (List<Integer> l : hl) {
 			ll.add(l);
 		}
 		return ll;
