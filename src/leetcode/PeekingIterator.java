@@ -48,4 +48,10 @@ public class PeekingIterator implements Iterator<Integer> {
 			return true;
 		return iterator.hasNext();
 	}
+
+	@Override
+	public void remove() {
+		// TODO Auto-generated method stub
+
+	}
 }

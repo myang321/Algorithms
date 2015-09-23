@@ -18,7 +18,16 @@ public class ClosestBinarySearchTreeValue {
 	// You are guaranteed to have only one unique value in the BST that is
 	// closest to the target.
 	public int closestValue(TreeNode root, double target) {
-
+		int val = root.val;
+		TreeNode next = null;
+		if (val < target)
+			next = root.left;
+		else
+			next = root.right;
+		if (next == null)
+			return val;
+		int nextVal = closestValue(next, target);
+		return Math.abs(target - nextVal) > Math.abs(target - val) ? val
+				: nextVal;
 	}
-
 }
