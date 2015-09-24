@@ -18,6 +18,7 @@ public class Permutations {
 	private int[] nums;
 	private boolean[] mark;
 
+	//
 	public List<List<Integer>> permute(int[] nums) {
 		results = new ArrayList<List<Integer>>();
 		this.nums = nums;

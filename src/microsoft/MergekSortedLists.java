@@ -11,6 +11,13 @@ public class MergekSortedLists {
 
 	}
 
+	// use divide and conquer
+	// time: O(klogk*n), n is the size of each list
+	// space: O(logk) beyond input
+	public ListNode mergeKLists(ListNode[] lists) {
+		return helper(lists, 0, lists.length);
+	}
+
 	private ListNode mergeTwoSortedList(ListNode head1, ListNode head2) {
 		if (head1 == null)
 			return head2;
@@ -34,11 +41,6 @@ public class MergekSortedLists {
 		if (head2 != null)
 			current.next = head2;
 		return dummy.next;
-	}
-
-	// use divide and conquer
-	public ListNode mergeKLists(ListNode[] lists) {
-		return helper(lists, 0, lists.length);
 	}
 
 	private ListNode helper(ListNode[] lists, int begin, int end) {

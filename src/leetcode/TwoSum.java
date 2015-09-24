@@ -8,9 +8,11 @@ public class TwoSum {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] a = { 3, 2, 4 };
+		int[] a = { 1, 1 };
 		TwoSum ts = new TwoSum();
-		ts.twoSum(a, 6);
+		int[] r = ts.twoSum(a, 2);
+		System.out.println(r[0]);
+		System.out.println(r[1]);
 	}
 
 	// using hashmap to get the other number : target - numbers[i]

@@ -9,6 +9,8 @@ public class IntersectionofTwoLinkedLists {
 
 	}
 
+	// space: O(1)
+	// time: O(n) at most 2 passes for each list
 	public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
 		if (headA == null || headB == null)
 			return null;

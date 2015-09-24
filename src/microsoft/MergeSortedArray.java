@@ -7,6 +7,8 @@ public class MergeSortedArray {
 
 	}
 
+	// space: O(1)
+	// time: O(n)
 	public void merge(int[] nums1, int m, int[] nums2, int n) {
 		int idx = m + n - 1;
 		m--;

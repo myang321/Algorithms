@@ -9,6 +9,8 @@ public class CopyListwithRandomPointer {
 
 	}
 
+	// space: in place O(1)
+	// time: O(n) with 3 passes
 	public RandomListNode copyRandomList(RandomListNode head) {
 		if (head == null)
 			return null;
