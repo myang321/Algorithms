@@ -32,7 +32,7 @@ public class CopyListwithRandomPointer {
 			orgCur = orgCur.next.next;
 		}
 
-		// step 3: reparate two list
+		// step 3: separate two list
 		RandomListNode cur = head;
 		RandomListNode copyHead = head.next;
 		while (cur != null && cur.next != null) {
