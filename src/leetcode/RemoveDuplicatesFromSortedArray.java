@@ -10,20 +10,20 @@ public class RemoveDuplicatesFromSortedArray {
 		int a[] = { 1 };
 		removeDuplicates(a);
 	}
+
 	public static int removeDuplicates(int[] A) {
-		if (A==null || A.length==0)
+		if (A == null || A.length == 0)
 			return 0;
-		int index =0;
-		for (int i=0;i<A.length;i++){
-			if (A[index]==A[i])
+		int index = 0;
+		for (int i = 0; i < A.length; i++) {
+			if (A[index] == A[i])
 				continue;
-			else
-			{
+			else {
 				index++;
-				A[index]=A[i];
+				A[index] = A[i];
 			}
 		}
-		return index +1;
-    }
+		return index + 1;
+	}
 
 }

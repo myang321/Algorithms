@@ -15,6 +15,7 @@ public class RotateList {
 		int len = lenList(head);
 		if (len == 0)
 			return head;
+		// in case k>=len
 		k = k % len;
 		if (k == 0)
 			return head;
