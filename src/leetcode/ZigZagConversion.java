@@ -1,4 +1,5 @@
 package leetcode;
+
 public class ZigZagConversion {
 
 	public static void main(String[] args) {
@@ -11,31 +12,21 @@ public class ZigZagConversion {
 	}
 
 	public static String convert(String s, int nRows) {
-		int n = 1000;
-		char[][] ch = new char[nRows][n];
-		int c = 0;
-		int r = 0;
-		for (int i = 0; i < s.length(); i++) {
-			ch[r][c] = s.charAt(i);
-			if (c % 2 == 0) {
-				r++;
-				if (r == nRows) {
-					c++;
-					r = (nRows - 1) / 2;
-				}
-			} else {
-				c++;
-				r = 0;
-			}
+		char[] cs = s.toCharArray();
+		int len = cs.length;
+		StringBuffer[] sbs = new StringBuffer[nRows];
+		for (int i = 0; i < nRows; i++)
+			sbs[i] = new StringBuffer();
+		int i = 0;
+		while (i < len) {
+			for (int j = 0; j < nRows && i < len; j++)
+				sbs[j].append(cs[i++]);
+			// as if it goes up vertically
+			for (int j = nRows - 2; j > 0 && i < len; j--)
+				sbs[j].append(cs[i++]);
 		}
-		StringBuffer sb = new StringBuffer();
-		for (int i = 0; i < nRows; i++) {
-			for (int j = 0; j < n; j++) {
-				if (((int) ch[i][j]) != 0) {
-					sb.append(ch[i][j]);
-				}
-			}
-		}
-		return sb.toString();
+		for (int j = 1; j < nRows; j++)
+			sbs[0].append(sbs[j]);
+		return sbs[0].toString();
 	}
 }
