@@ -36,6 +36,7 @@ public class WordPattern {
 			return false;
 
 		// map String->char
+		// if reach here, pattern and string has same size
 		i = 0;
 		for (char c : pattern.toCharArray()) {
 			while (array[i].isEmpty())
