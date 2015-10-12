@@ -16,6 +16,7 @@ public class LowestCommonAncestorofaBinaryTree {
 			return root;
 		TreeNode l = lowestCommonAncestor(root.left, p, q);
 		TreeNode r = lowestCommonAncestor(root.right, p, q);
+		// only the lca will have both l,r not null
 		if (l != null && r != null)
 			return root;
 		if (l != null)
