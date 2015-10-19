@@ -4,6 +4,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import leetcode.model.Interval;
+
 public class MergeIntervals {
 
 	public static void main(String[] args) {

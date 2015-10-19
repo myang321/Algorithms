@@ -1,6 +1,8 @@
 package leetcode;
 import java.util.ArrayList;
 
+import leetcode.model.Interval;
+
 public class InsertInterval {
 
 	public static void main(String[] args) {

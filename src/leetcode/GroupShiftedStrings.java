@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.List;
+
 public class GroupShiftedStrings {
 
 	public static void main(String[] args) {

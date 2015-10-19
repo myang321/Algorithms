@@ -20,7 +20,7 @@ public class ClosestBinarySearchTreeValue {
 	public int closestValue(TreeNode root, double target) {
 		int val = root.val;
 		TreeNode next = null;
-		if (val < target)
+		if (target < val)
 			next = root.left;
 		else
 			next = root.right;
