@@ -1,11 +1,19 @@
 package leetcode;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 public class GroupShiftedStrings {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		GroupShiftedStrings g = new GroupShiftedStrings();
+		String[] strings = { "abc", "bcd", "acef", "xyz", "az", "ba", "z", "a" };
+		List<List<String>> result = g.groupStrings(strings);
+		System.out.println(result);
 
 	}
 
@@ -23,10 +31,38 @@ public class GroupShiftedStrings {
 	// ["acef"],
 	// ["a","z"]
 	// ]
-	// Note: For the return value, each inner list's elements must follow the lexicographic order.
-	
-	public List<List<String>> groupStrings(String[] strings) {
+	// Note: For the return value, each inner list's elements must follow the
+	// lexicographic order.
 
+	public List<List<String>> groupStrings(String[] strings) {
+		List<List<String>> result = new ArrayList<List<String>>();
+		HashMap<String, ArrayList<String>> hm = new HashMap<String, ArrayList<String>>();
+		for (String s : strings) {
+			String key = getKey(s);
+			ArrayList<String> value = null;
+			if (hm.containsKey(key))
+				value = hm.get(key);
+			else
+				value = new ArrayList<String>();
+			value.add(s);
+			hm.put(key, value);
+		}
+		for (String key : hm.keySet()) {
+			ArrayList<String> value = hm.get(key);
+			Collections.sort(value);
+			result.add(value);
+		}
+		return result;
+	}
+
+	private String getKey(String s) {
+		StringBuffer sb = new StringBuffer();
+		int shift = ('z' - s.charAt(0) + 1) % 26;
+		for (char c : s.toCharArray()) {
+			char c2 = (char) ('a' + ((c - 'a') + shift) % 26);
+			sb.append(c2);
+		}
+		return sb.toString();
 	}
 
 }

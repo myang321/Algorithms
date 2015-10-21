@@ -17,6 +17,8 @@ public class ClosestBinarySearchTreeValue {
 	// Given target value is a floating point.
 	// You are guaranteed to have only one unique value in the BST that is
 	// closest to the target.
+
+	// min will be either current node, or one subtree
 	public int closestValue(TreeNode root, double target) {
 		int val = root.val;
 		TreeNode next = null;
