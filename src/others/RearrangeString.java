@@ -5,11 +5,12 @@ public class RearrangeString {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		RearrangeString r = new RearrangeString();
-		System.out.println(r.f("aaab"));
+		String s = "aaaabb";
+		System.out.println(r.f(s));
 
 	}
 
-	// rearrage string so that no two same letter next to each other
+	// rearrage string so that no wo same letter next to each other
 	public String f(String s) {
 		int len = s.length();
 		int[] cnt = new int[26];
