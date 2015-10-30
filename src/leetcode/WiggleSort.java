@@ -1,9 +1,15 @@
 package leetcode;
 
+import java.util.Arrays;
+
 public class WiggleSort {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		WiggleSort w = new WiggleSort();
+		int[] nums = { 1, 2, 3, 4, 5 };
+		w.wiggleSort(nums);
+		System.out.println(Arrays.toString(nums));
 
 	}
 
@@ -18,7 +24,14 @@ public class WiggleSort {
 	// If i is odd, then nums[i] >= nums[i - 1];
 	// If i is even, then nums[i] <= nums[i - 1].
 	public void wiggleSort(int[] nums) {
-
+		for (int i = 0; i < nums.length - 1; i++) {
+			boolean f1 = i % 2 == 0;
+			boolean f2 = nums[i] > nums[i + 1];
+			if ((f1 && f2) || (!f1 && !f2)) {
+				int t = nums[i];
+				nums[i] = nums[i + 1];
+				nums[i + 1] = t;
+			}
+		}
 	}
-
 }
