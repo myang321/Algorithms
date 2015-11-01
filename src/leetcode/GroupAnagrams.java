@@ -1,19 +1,25 @@
 package leetcode;
+
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 
-public class Anagrams {
+public class GroupAnagrams {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s = "pen";
-		// System.out.println(hash(s));
+		GroupAnagrams g = new GroupAnagrams();
+		String s = "";
+		String[] strs = { s };
+		System.out.println(g.groupAnagrams(strs));
 	}
 
-	public ArrayList<String> anagrams(String[] strs) {
+	// sort char array to find anagram
+	public List<List<String>> groupAnagrams(String[] strs) {
 		HashMap<String, ArrayList<String>> m = new HashMap<String, ArrayList<String>>();
-		ArrayList<String> result = new ArrayList<String>();
+		List<List<String>> result = new ArrayList<List<String>>();
 		for (String s : strs) {
 			String key = sortStr(s);
 			if (!m.containsKey(key)) {
@@ -22,9 +28,8 @@ public class Anagrams {
 			m.get(key).add(s);
 		}
 		for (ArrayList<String> l : m.values()) {
-			if (l.size() > 1) {
-				result.addAll(l);
-			}
+			Collections.sort(l);
+			result.add(l);
 		}
 		return result;
 	}
@@ -35,6 +40,7 @@ public class Anagrams {
 		return new String(arr);
 	}
 
+	// ///////////////////////////////////////////////////////////////////
 	public ArrayList<String> anagrams2(String[] strs) {
 
 		HashMap<Integer, ArrayList<String>> m = new HashMap<Integer, ArrayList<String>>();

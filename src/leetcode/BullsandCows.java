@@ -17,6 +17,7 @@ public class BullsandCows {
 		int[] hash = new int[10];
 		for (int i = 0; i < len; i++)
 			hash[secret.charAt(i) - '0']++;
+		// find bulls first
 		for (int i = 0; i < len; i++) {
 			char c = guess.charAt(i);
 			if (secret.charAt(i) == c){
@@ -24,6 +25,7 @@ public class BullsandCows {
 				hash[c - '0']--;
 			}
 		}
+		// then match cows
 		for (int i = 0; i < len; i++) {
 			char c = guess.charAt(i);
 			if (secret.charAt(i) != c && hash[c - '0'] > 0) {
