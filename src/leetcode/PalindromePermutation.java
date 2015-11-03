@@ -22,13 +22,14 @@ public class PalindromePermutation {
 
 	// can have no more than one char that appear odd times
 	public boolean canPermutePalindrome(String s) {
-		int[] hashMap = new int[256];
+		int len = 256;
+		int[] hashMap = new int[len];
 		for (char c : s.toCharArray()) {
-			hashMap[c - 'a']++;
+			hashMap[c]++;
 		}
 		// cnt odd
 		int cnt = 0;
-		for (int i = 0; i < 26; i++)
+		for (int i = 0; i < len; i++)
 			if (hashMap[i] % 2 == 1)
 				cnt++;
 		return cnt <= 1;
