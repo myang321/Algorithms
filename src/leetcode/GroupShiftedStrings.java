@@ -56,13 +56,14 @@ public class GroupShiftedStrings {
 	}
 
 	private String getKey(String s) {
-		StringBuffer sb = new StringBuffer();
+		int len = s.length();
+		char[] arr = new char[len];
 		int shift = ('z' - s.charAt(0) + 1) % 26;
-		for (char c : s.toCharArray()) {
-			char c2 = (char) ('a' + ((c - 'a') + shift) % 26);
-			sb.append(c2);
+		for (int i = 0; i < len; i++) {
+			char c2 = (char) ('a' + ((s.charAt(i) - 'a') + shift) % 26);
+			arr[i] = c2;
 		}
-		return sb.toString();
+		return new String(arr);
 	}
 
 }
