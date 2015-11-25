@@ -1,6 +1,11 @@
 package CC150.Chapter7;
 
+import static java.lang.System.out;
+
 public class Question2 {
+	public static void main(String[] args) {
+		out.println();
+	}
 
 }
 
